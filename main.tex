@@ -1,0 +1,703 @@
+\documentclass[9pt]{beamer}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Use roboto Font (recommended)
+%\usepackage[sfdefault]{roboto}
+\usepackage[math]{iwona}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Define where theme files are located. ('/styles')
+\usepackage{styles/fluxmacros}
+\usefolder{styles}
+% Use Flux theme v0.1 beta
+% Available style: asphalt, blue, red, green, gray 
+\usetheme[style=asphalt]{flux}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Extra packages for the demo:
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{schemabloc}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Paquetes adicionales
+\usepackage[spanish,mexico]{babel}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{xltabular}
+\usepackage{subcaption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    xleftmargin=.2in,
+    xrightmargin=.2in
+}
+\lstset{style=mystyle}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% P O R T A D A
+% Título de la tesis
+\title{Título de la tesis}
+
+% Descomenta lo que vas a presentar
+\subtitle{Defensa de Tesis}
+%\subtitle{Avance de Tesis}
+%\subtitle{Anteproyecto de Tesis}
+
+% Descomenta el programa al que perteneces
+%\institute{Maestría en Ingeniería para la Innovación Tecnológica}
+\institute{Doctorado en Ingeniería para la Innovación Tecnológica}
+%\institute{Ingeniería en}
+
+% Pon tu nombre completo sin grado (Ing, Lic, etc), a los miembros del comité pon el nombre completo junto con su grado (Dr., M.C., etc) y con paréntesis indica su rol en el comité, ya sea (Director) o (Co-Director), los demás miembros quedan en blanco, pueden ser un director y hasta dos co-directores
+\author{Nombre completo del estudiante \and 
+    Comité de Tesis \and
+    Dr. Nombre del director de tesis (Director)\and
+    Dr. Nombre del co-director de tesis (Co-Director)\and
+    Dr. Nombre del miembro del comité \and
+    Dr. Nombre del miembro del comité \and
+    Dr. Nombre del miembro del comité}
+\date{\today}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{document}
+% Generate title page
+\justifying
+\titlepage
+\begin{frame}[allowframebreaks]{Contenido}
+ \tableofcontents
+\end{frame}
+
+\section{Estructura de la presentación}
+\begin{frame}[allowframebreaks,fragile]{Estructura de la presentación}
+La estructura de una presentación del anteproyecto, avance o defensa de tesis debe ser clara, concisa y organizada para cubrir los puntos clave de la investigación de manera efectiva. Esta debe de incluir las siguientes secciones:
+
+\begin{enumerate}
+    \item Título e Introducción:
+    \begin{enumerate}
+        \item Título de la Tesis y datos del autor (nombre, programa de estudios, nombre del director de tesis, fecha).
+        \item Objetivo de la Presentación: Explicar brevemente el propósito de la defensa.
+        \item Contexto o Introducción General: Mencionar el problema de investigación, su relevancia y cómo se sitúa en el campo de estudio.
+    \end{enumerate}
+    \item Planteamiento del Problema:
+    \begin{enumerate}
+        \item Describir claramente el problema que aborda la tesis.
+        \item Explicar por qué es importante resolver o estudiar este problema.
+        \item Presentar la pregunta de investigación principal.
+    \end{enumerate}
+    \item Objetivos de la Investigación:
+    \begin{enumerate}
+        \item Objetivo General: Resumir el propósito principal de la tesis.
+        \item Objetivos Específicos: Enumerar los pasos específicos para lograr el objetivo general.
+    \end{enumerate}
+    \item Marco Teórico:
+    \begin{enumerate}
+        \item Breve mención de las teorías, conceptos y estudios previos que sustentan la investigación.
+        \item Destacar las bases científicas o teóricas más relevantes para el problema estudiado.
+    \end{enumerate}
+    \item Metodología:
+    \begin{enumerate}
+        \item Explicar el enfoque de investigación (cuantitativo, cualitativo, mixto).
+        \item Describir los métodos y técnicas utilizados para la recolección y análisis de datos.
+        \item Explicar el diseño de la investigación y los instrumentos empleados.
+    \end{enumerate}
+    \item Resultados:
+    \begin{enumerate}
+        \item Presentar los hallazgos principales de la investigación, utilizando gráficos, tablas o diagramas para facilitar la comprensión.
+        \item Explicar los datos relevantes, resaltando cómo responden a la pregunta de investigación.
+    \end{enumerate}
+    \item Análisis y Discusión:
+    \begin{enumerate}
+        \item Interpretar los resultados obtenidos y relacionarlos con el marco teórico.
+        \item Comparar los hallazgos con estudios previos y discutir su implicación.
+        \item Identificar cualquier limitación en los resultados y sugerir áreas para investigaciones futuras.
+    \end{enumerate}
+    \item Cronograma de la Investigación:
+    \begin{enumerate}
+        \item Descripción del Cronograma: Presentar una línea de tiempo o diagrama de Gantt que muestre las fases de la investigación (búsqueda bibliográfica, diseño metodológico, recolección de datos, análisis, redacción).
+        \item Explicar brevemente el proceso y cómo se distribuyó el tiempo para cada actividad, demostrando una organización eficiente.
+    \end{enumerate}
+    \item Conclusiones:
+    \begin{enumerate}
+        \item Resumir las conclusiones más importantes de la investigación en relación con los objetivos y la pregunta de investigación.
+        \item Mencionar la contribución al campo de estudio o posibles aplicaciones prácticas.
+    \end{enumerate}
+    \item Trabajo futuro (Opcional):
+    \begin{enumerate}
+        \item Sugerir posibles líneas de investigación futura o aplicaciones de los resultados.
+    \end{enumerate}
+    \item Referencias:
+    \begin{enumerate}
+        \item Incluir una Diapositiva de Referencias: Mostrar una lista de las fuentes más importantes que sustentaron el marco teórico y la metodología.
+        \item Asegurarse de utilizar el formato de citación APA.
+    \end{enumerate}
+    \item Agradecimientos (Opcional):
+    \begin{enumerate}
+        \item Agradecer a aquellas personas o instituciones que contribuyeron significativamente a la realización de la tesis.
+    \end{enumerate}
+    \item Preguntas del Comité de Tesis:
+    \begin{enumerate}
+        \item Preparación para las Preguntas: Al terminar la presentación el comité realizará preguntas para la evaluación del trabajo realizado.
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+Consejos:
+
+\begin{enumerate}
+    \item [] Tiempo: La presentación debe ser concisa de 20 a 30 minutos.
+    \item [] Diapositivas Visuales: Usar gráficos, tablas y diagramas que ayuden a resumir y clarificar la información.
+    \item [] Ensayar: Practicar la presentación para mejorar el dominio del tema y la claridad de la exposición.
+\end{enumerate}
+\end{frame}
+\section{Planteamiento del Problema}
+\begin{frame}[allowframebreaks,fragile]{Planteamiento del Problema}
+El planteamiento del problema es una sección que describe de manera clara y detallada el problema específico que se va a investigar. Este es el punto de partida de la investigación y define el enfoque que guiará todos los esfuerzos. En esta sección, el investigador justifica la relevancia del problema, establece el contexto en el que se encuentra y explica por qué es necesario abordarlo, especialmente en el ámbito de la ingeniería.
+
+\begin{enumerate}
+    \item Contextualización del Problema:
+    Comienza proporcionando un contexto amplio sobre el área de estudio y el entorno en el que se sitúa el problema.
+
+    Incluye una descripción general de los avances o carencias en la tecnología o el campo de estudio, mencionando posibles necesidades industriales, problemas prácticos, desafíos económicos, o metas científicas que aún no han sido alcanzadas.
+
+    \item Descripción Específica del Problema:
+
+    Define de forma precisa el problema central de la investigación. Esto puede incluir aspectos técnicos o científicos, limitaciones de los métodos o tecnologías actuales, o una necesidad específica que aún no ha sido satisfecha.
+
+    El problema debe ser claramente delimitado, evitando ambigüedades y enfocándose en el aspecto particular que la tesis busca resolver o mejorar.
+
+    \item Justificación de la Relevancia del Problema:
+
+    Explica por qué el problema es relevante desde el punto de vista científico, técnico o social, y cómo su resolución contribuirá al campo de estudio o tendrá aplicaciones prácticas.
+
+    Resalta el impacto potencial que tendría abordar este problema, como mejorar la eficiencia, precisión, seguridad, costos o innovación en una tecnología o proceso de ingeniería.
+
+    \item Consecuencias de No Abordar el Problema:
+
+    Expón los efectos negativos que implicaría no resolver el problema identificado, ya sea en términos de pérdidas económicas, limitaciones tecnológicas, riesgo de seguridad, o falta de competitividad en el sector.
+
+    Esta parte ayuda a fortalecer la necesidad de la investigación y a subrayar la importancia de encontrar una solución.
+
+    \item Declaración del Problema:
+
+    Redacta la formulación del problema de manera clara y concisa. Puede ser en forma de pregunta de investigación o de un enunciado que exprese la necesidad de desarrollo o de solución.
+
+    La declaración debe reflejar el núcleo de la investigación y guiar el resto de los capítulos de la tesis.
+
+    \item Objetivos del Planteamiento del Problema (Opcional):
+
+    Finaliza el planteamiento con una breve introducción a los objetivos generales de la investigación, que posteriormente se desarrollarán en la sección de objetivos. Esta conexión prepara el terreno para mostrar cómo se abordará el problema planteado.
+\end{enumerate}
+
+Consideraciones:
+
+Un planteamiento de problema efectivo en una tesis de posgrado en ingeniería debe ser claro y directo, evitando descripciones excesivas pero brindando el suficiente detalle para justificar la investigación.
+
+Es recomendable usar términos técnicos y lenguaje formal, adecuado al nivel académico y a la especialización de los lectores.
+
+
+El planteamiento del problema debe dejar claro el desafío técnico o científico y su relevancia, estableciendo así la base para el desarrollo de los objetivos y la metodología de la investigación.
+\end{frame}
+\section{Objetivos}
+\begin{frame}[allowframebreaks,fragile]{Objetivos}
+Los objetivos se definen para guiar y delimitar el alcance del proyecto, estableciendo metas claras que orienten el desarrollo de la investigación. 
+
+Los objetivos dividen el propósito de la investigación en tareas alcanzables, y suelen dividirse en un objetivo general y varios objetivos específicos.
+
+Pasos para  efinir los Objetivos en una Tesis de Posgrado en Ingeniería:
+
+\begin{enumerate}
+    \item Definir el Objetivo General:
+
+    El objetivo general responde a la pregunta: ¿Qué pretende lograr esta investigación de manera amplia?
+
+    Describe el propósito principal del proyecto, planteado de manera precisa y concisa.
+
+    Ejemplos de verbos comunes para el objetivo general: ``desarrollar'', ``diseñar'', ``evaluar'', ``proponer'', ``optimizar'', ``implementar''.
+
+    En ingeniería, el objetivo general suele estar orientado a la creación, mejora, o evaluación de una tecnología, método o proceso.
+
+    \item Establecer Objetivos Específicos:
+
+    Los objetivos específicos desglosan el objetivo general en tareas concretas y pasos secuenciales, enfocándose en aspectos específicos que deben lograrse para cumplir el objetivo general.
+
+    Cada objetivo específico debe ser claro, alcanzable y medible. En una tesis de ingeniería, estos pueden incluir la investigación teórica, el diseño de prototipos, la implementación de pruebas, y la evaluación de resultados.
+
+    Usualmente se utilizan verbos como ``analizar'', ``identificar'', ``probar'', ``validar'', ``simular'', ``medir'', que reflejan las etapas del desarrollo experimental y de validación.
+
+    \item Enfocar los Objetivos en resultados medibles:
+
+    Dado que una tesis de ingeniería suele involucrar mediciones, pruebas y análisis de resultados, los objetivos deben estar orientados hacia metas cuantificables o medibles.
+
+    Esto permite verificar el cumplimiento de cada objetivo específico al concluir la investigación, con resultados concretos.
+
+    \item Conectar los Objetivos con el Planteamiento del Problema:
+
+    Los objetivos deben resolver o avanzar en la solución del problema planteado, demostrando cómo la investigación aborda necesidades concretas o limitaciones del conocimiento o la tecnología actuales.
+
+    Para cada objetivo específico, es recomendable verificar que esté alineado con una necesidad o aspecto mencionado en el planteamiento del problema.
+\end{enumerate}
+
+Consejos adicionales para definir Objetivos en una Tesis de Ingeniería:
+
+\begin{enumerate}
+    \item Asegúrate de que los objetivos sean realistas y alcanzables dentro del marco de la tesis.
+    \item Escribe cada objetivo de manera concisa y específica, evitando la ambigüedad.
+    \item Revisa que los objetivos cubran todas las fases de la investigación, desde la teoría y el diseño hasta la validación y análisis de resultados.
+    \item Al estructurar los objetivos de esta forma, se logra que la investigación sea metódica y organizada, avanzando de manera lógica desde los conceptos iniciales hasta la implementación y validación del trabajo.
+\end{enumerate}    
+\end{frame}
+\section{Marco Teórico}
+\begin{frame}[allowframebreaks,fragile]{Marco Teórico}
+En el caso de una tesis de posgrado en Ingeniería, el marco teórico toma un enfoque aún más profundo y especializado para demostrar un conocimiento avanzado del tema. Esto implica una revisión exhaustiva de los fundamentos científicos, las tecnologías específicas y las investigaciones más recientes y relevantes en el área.
+
+\begin{enumerate}
+    \item Profundización en Teorías y Modelos Avanzados:
+
+    Se requieren teorías y modelos más complejos que permitan abordar problemas específicos de ingeniería. Esto puede incluir modelos matemáticos avanzados, simulaciones, o algoritmos detallados.
+
+   \item Estado del Arte y Últimas Tendencias:
+
+    El marco teórico en una tesis de posgrado incluye una revisión del estado del arte en el tema, analizando las soluciones tecnológicas más avanzadas y recientes.
+
+    Identificar y discutir investigaciones de vanguardia permite definir claramente las limitaciones actuales y el aporte innovador de la tesis.
+
+    \item Fundamentación Tecnológica y Algorítmica:
+
+    En una investigación de posgrado, es esencial desarrollar una descripción detallada de las tecnologías y algoritmos empleados en el proyecto.
+
+    \item Revisión Crítica y Justificación del Enfoque:
+
+    A diferencia de una tesis de grado, el nivel de posgrado exige una revisión crítica de las teorías y técnicas seleccionadas, justificando por qué se eligieron ciertos métodos y no otros.
+
+    \item Modelado Matemático y Simulación:
+
+    Es común incluir modelado matemático para representar el sistema o fenómeno estudiado, así como simulaciones que permitan validar teorías antes de implementarlas.
+
+    \item Base para la Metodología:
+
+    El marco teórico en un posgrado no solo da contexto, sino que establece la base para la metodología. Los conceptos y teorías presentados deben conectarse claramente con los métodos y técnicas que se utilizarán en la investigación.
+\end{enumerate}
+\end{frame}
+\section{Metodología}
+\begin{frame}[allowframebreaks,fragile]{Metodología}
+La metodología en una tesis de posgrado en ingeniería describe el enfoque, los métodos y las técnicas específicas que se utilizarán para alcanzar los objetivos de la investigación y resolver el problema planteado. La metodología es esencial para dar claridad al proceso de investigación, detallando cómo se llevarán a cabo cada etapa del estudio, las herramientas y recursos necesarios, así como los criterios de validación y análisis.
+
+Estructura de la Metodología:
+
+\begin{enumerate}
+    \item Enfoque de la investigación:
+
+    Define el tipo de enfoque (experimental, cuantitativo, cualitativo, mixto) que mejor responde a la naturaleza del problema.
+
+    En ingeniería, el enfoque suele ser experimental y cuantitativo, ya que busca medir y analizar datos concretos para evaluar el desempeño de soluciones o tecnologías.
+
+    \item Diseño experimental o estructura de trabajo:
+
+    Describe el diseño experimental o la estructura de trabajo en términos de fases o etapas.
+
+    Detalla cómo se desarrollará la investigación de manera organizada, desde la revisión inicial hasta la evaluación final.
+
+    Estas fases pueden incluir análisis teórico, simulaciones, desarrollo de prototipos, pruebas experimentales, optimización, etc.
+
+    \item Herramientas, equipos y recursos:
+
+    Especifica el hardware, software, equipos de laboratorio, y recursos materiales necesarios para la investigación.
+
+    Por ejemplo, en ingeniería, esto podría incluir dispositivos de medición, sensores, microcontroladores, software de simulación, etc.
+
+    También se debe mencionar cualquier recurso humano adicional (asistentes de investigación, expertos, etc.) que apoyará el desarrollo.
+
+    \item Procedimientos técnicos y pasos de desarrollo:
+
+    Desglosa las etapas específicas y procedimientos técnicos, como la construcción de prototipos, configuración de equipos, recolección de datos y análisis estadístico.
+
+    Cada paso debe estar bien explicado para que sea reproducible, especialmente en los aspectos de configuración de parámetros, ejecución de pruebas y toma de medidas.
+
+    \item Simulaciones y modelado (si aplica):
+
+    Si la investigación requiere simulaciones o modelado matemático, explica el software y las técnicas específicas utilizadas, como el diseño asistido por computadora (CAD), análisis de elementos finitos (FEA), Matlab, Python, etc.
+
+    Describe el propósito de estas simulaciones y cómo se alinean con los objetivos específicos.
+
+    \item Pruebas experimentales y protocolos de validación:
+
+    Define los experimentos, las pruebas de campo o de laboratorio, y el método de recolección de datos.
+
+    Especifica los criterios de validación que utilizarás para evaluar los resultados, que pueden incluir pruebas de precisión, eficiencia, seguridad, fiabilidad, etc.
+
+    \item Análisis de datos y métodos de evaluación:
+
+    Describe los métodos para procesar y analizar los datos obtenidos, como técnicas estadísticas, análisis de error, o métodos de interpretación gráfica.
+
+    En una investigación de ingeniería, los datos suelen evaluarse en función de criterios de rendimiento, eficiencia o precisión, por lo que los métodos de evaluación deben ajustarse a estos parámetros.
+
+    \item Limitaciones y alcance de la Metodología:
+
+    Describe cualquier limitación del enfoque o los métodos empleados, explicando las posibles restricciones de la investigación y el alcance que se espera lograr.
+
+    Esta parte es importante para comprender hasta dónde llegan los resultados y en qué contextos podrían aplicarse.
+\end{enumerate}
+
+Consejos Adicionales para Definir la Metodología en una Tesis de Ingeniería:
+
+\begin{enumerate}
+    \item Asegúrate de que cada método o técnica esté alineado con un objetivo específico, mostrando cómo contribuye a resolver el problema planteado.
+    \item Describe con precisión los equipos, software y protocolos de seguridad, ya que estos detalles son cruciales en trabajos de ingeniería.
+    \item Sé claro y detallado en cada paso del procedimiento para que otros investigadores puedan replicar tu metodología.
+\end{enumerate}
+
+La metodología debe demostrar un proceso sólido, estructurado y científicamente válido, que no solo permita alcanzar los objetivos de la investigación, sino que también respalde la credibilidad y aplicabilidad de los resultados.
+\end{frame}
+\section{Resultados}
+\begin{frame}[allowframebreaks,fragile]{Resultados}
+La sección de resultados es fundamental, ya que presenta los hallazgos obtenidos de las pruebas, experimentos o simulaciones que se realizaron siguiendo la metodología establecida. Esta sección debe describir y analizar los datos de manera clara y objetiva, destacando cómo estos resultados cumplen (o no) con los objetivos planteados y cómo responden al problema de investigación.
+
+Estructura de la Sección de Resultados:
+
+\begin{enumerate}
+    \item Presentación de Datos Obtenidos:
+
+    Organiza los datos recolectados en tablas, gráficos o figuras, que permitan visualizar la información de forma clara y resumida.
+
+    Incluye únicamente datos relevantes y omite información redundante.
+
+    Cada tabla o figura debe tener un título claro y una breve explicación que permita entenderla de manera independiente.
+
+    \item Descripción de los Resultados:
+
+    Describe los resultados observados sin interpretarlos. En esta etapa, el enfoque debe estar en explicar qué muestran los datos de manera objetiva.
+
+    Organiza esta descripción de acuerdo a los objetivos específicos, para que el lector pueda ver claramente cómo se cumplieron cada uno de ellos.
+
+    Puedes organizar esta sección en subapartados para cada experimento, simulación o fase del proyecto, según sea el caso.
+
+    \item Análisis e interpretación:
+
+    Analiza los resultados, interpretando su significado en el contexto del problema de investigación y los objetivos planteados.
+
+    Identifica patrones, tendencias o relaciones relevantes entre las variables. Explica cómo estos hallazgos se relacionan con el desarrollo del sistema o tecnología investigada.
+
+    En ingeniería, esto podría incluir comparaciones con estándares de la industria, con estudios previos o con parámetros de rendimiento esperados.
+
+    \item Comparación con la literatura o estudios previos:
+
+    Compara los resultados obtenidos con estudios similares o literatura previa para ver cómo se posicionan tus hallazgos en el contexto del campo de estudio.
+
+    Esto ayuda a validar tus resultados y demuestra que el trabajo tiene una base científica sólida y contribuye al conocimiento existente en la materia.
+
+    \item Validación y discusión de los resultados:
+
+    Expón la validez de tus hallazgos explicando las pruebas de control, análisis estadístico, o métodos de validación que se aplicaron.
+
+    Discute las posibles causas de cualquier desviación, error o anomalía observada, explicando cómo afectaron los resultados y en qué medida impactan en la conclusión de la investigación.
+
+    En esta parte puedes mencionar si los resultados son reproducibles o si existen limitaciones que afectaron la precisión de los datos.
+
+    \item Presentación de resultados clave para conclusiones:
+
+    Resalta los resultados más importantes que serán la base para las conclusiones finales de la tesis.
+
+    Los resultados clave deben conectarse directamente con el planteamiento del problema y con los objetivos generales y específicos.
+\end{enumerate}
+
+Consejos para Redactar la Sección de Resultados en una Tesis de Ingeniería
+
+\begin{enumerate}
+    \item Usa un lenguaje preciso y evita interpretaciones subjetivas; presenta los resultados de manera objetiva.
+    \item Asegúrate de que cada dato esté respaldado visualmente (tablas o gráficos) y acompaña cada gráfico de una breve descripción y análisis.
+    \item Evita sobrecargar la sección con demasiados datos. Resalta lo que es crucial y utiliza anexos para información adicional, si es necesario.
+\end{enumerate}
+
+La sección de resultados debe presentar de manera estructurada y visual los logros alcanzados, evidenciando cómo estos contribuyen a la solución del problema de investigación y cumplen con los objetivos planteados.
+\end{frame}
+\section{Análisis y Discusión}
+\begin{frame}[allowframebreaks,fragile]{Análisis y Discusión}
+La sección de análisis y discusión es donde se interpretan y contextualizan los resultados, evaluando su relevancia en relación con los objetivos de la investigación y el problema planteado. En esta sección, el investigador conecta los hallazgos con el conocimiento existente, discute su validez y limita su alcance, aportando una visión crítica y detallada de los resultados obtenidos.
+
+Estructura de la Sección de Análisis y Discusión:
+
+\begin{enumerate}
+    \item Interpretación de los Resultados:
+
+    Explica el significado de los resultados obtenidos, relacionándolos con cada objetivo específico de la investigación.
+
+    Describe cómo los datos responden al planteamiento del problema y destacan los logros alcanzados o los aspectos en los que los resultados fueron distintos a lo esperado.
+
+    En ingeniería, esto puede incluir una discusión sobre la eficiencia, precisión o desempeño del sistema desarrollado en diferentes condiciones.
+
+    \item Comparación con estudios previos o literatura:
+
+    Compara tus resultados con estudios o investigaciones previas en el campo, evaluando si tus hallazgos son consistentes o presentan diferencias.
+
+    Si tus resultados difieren de lo que otros autores han reportado, justifica estas discrepancias. Esto puede deberse a diferencias en metodologías, condiciones de prueba, o materiales utilizados.
+
+    La comparación ayuda a ubicar tu investigación dentro del contexto más amplio del área de estudio, mostrando su relevancia y originalidad.
+
+    \item Implicaciones prácticas y teóricas:
+
+    Discute las posibles aplicaciones prácticas de los resultados y cómo contribuyen al avance tecnológico o metodológico en el área de ingeniería.
+
+    Reflexiona sobre las implicaciones teóricas de tus hallazgos, aportando a la base de conocimiento existente y sugiriendo cómo podrían influir en futuras investigaciones.
+
+    \item Limitaciones del estudio:
+
+    Expón las limitaciones técnicas o metodológicas que pudieron afectar los resultados, como restricciones en los recursos, errores experimentales, o limitaciones en los equipos.
+
+    Reconocer las limitaciones muestra la transparencia del investigador y ayuda a los lectores a evaluar el alcance de las conclusiones.
+
+    \item Posibles explicaciones para inconsistencias:
+
+    Si algunos resultados no fueron los esperados, sugiere posibles explicaciones, como variaciones en las condiciones de prueba, factores externos, o limitaciones de los métodos.
+
+    Propón recomendaciones para evitar estas inconsistencias en investigaciones futuras.
+
+    \item Propuestas para Trabajos Futuros:
+
+    Con base en los hallazgos y limitaciones identificadas, ofrece recomendaciones o líneas de investigación que podrían expandir o profundizar los resultados obtenidos.
+
+    Sugerir trabajos futuros muestra la proyección de la investigación, señalando áreas que aún pueden ser mejoradas o exploradas.
+\end{enumerate}
+
+
+Consejos para Redactar la Sección de Análisis y Discusión en una Tesis de Ingeniería
+
+\begin{enumerate}
+    \item Asegúrate de hacer una interpretación lógica y detallada de los resultados, evitando conclusiones apresuradas.
+    \item Evita redundancias con la sección de resultados. En análisis y discusión, céntrate en el significado e implicación de los datos.
+    \item Sé claro y crítico. Aborda tanto los éxitos como las limitaciones y áreas de mejora.
+    \item Muestra cómo tu investigación contribuye al avance en el campo y por qué es relevante para el desarrollo de nuevas tecnologías, métodos o conocimientos.
+\end{enumerate}
+
+La sección de análisis y discusión debe ofrecer una visión profunda y crítica del trabajo, conectando los resultados con el problema inicial, y destacando la relevancia, limitaciones y potenciales futuras aplicaciones de la investigación en ingeniería.
+\end{frame}
+\section{Cronograma}
+\begin{frame}[allowframebreaks,fragile]{Cronograma}
+El cronograma es una herramienta de planificación que detalla el tiempo estimado para completar cada una de las actividades de investigación. Este apartado es fundamental para organizar el trabajo y asegurarse de que cada fase del proyecto se lleve a cabo en los tiempos previstos. Un cronograma bien estructurado ayuda tanto a cumplir con los objetivos a tiempo como a visualizar el progreso del proyecto.
+
+Elementos Clave del Cronograma
+
+\begin{enumerate}
+    \item Desglose de actividades:
+
+    Enumera todas las actividades y fases principales de la investigación, desde la revisión de la literatura y el desarrollo de la metodología, hasta la experimentación, análisis de datos y redacción del informe final.
+
+    Agrupa actividades relacionadas bajo categorías, como ``Revisión de literatura'', ``Diseño experimental'', ``Implementación'', ``Pruebas y validación'', ``Análisis de resultados'' y ``Redacción y revisión de la tesis''.
+
+    \item Estimación de tiempos:
+
+    Asigna una duración específica para cada actividad, indicando cuánto tiempo se espera que tome cada fase (en días, semanas o meses, según sea conveniente).
+
+    La duración debe ser realista, considerando posibles contratiempos o periodos de revisión.
+
+    \item Orden secuencial y dependencias:
+
+    Presenta las actividades en el orden en el que deben realizarse. Algunas actividades pueden depender de la finalización de otras, por lo que debe haber claridad sobre estas dependencias.
+
+    Por ejemplo, ``Pruebas y validación'' depende de que se haya completado la ``Implementación''.
+
+    \item Formato visual del cronograma:
+
+    La forma más común de presentar un cronograma es a través de un diagrama de Gantt, donde cada actividad se representa como una barra en una línea de tiempo.
+
+    Cada barra muestra el inicio y fin de la actividad, así como su duración, lo que permite visualizar el avance del proyecto en cada etapa.
+
+    \item Hitos o entregables clave:
+
+    Incluye hitos o puntos clave del proyecto, como la finalización de cada fase principal o la entrega de informes parciales, para marcar el progreso y evaluar si el proyecto avanza según lo planificado.
+
+    Estos hitos pueden incluir eventos como ``Finalización de la revisión bibliográfica'', ``Prototipo completado'', ``Pruebas concluidas'', ``Primer borrador de la tesis'', etc.
+
+    \item Flexibilidad y revisión del cronograma:
+
+    El cronograma debe considerar un margen de flexibilidad para abordar posibles retrasos o ajustes necesarios en las fases de la investigación.
+
+    Es útil añadir una ``revisión de cronograma'' periódica para evaluar si los tiempos asignados se están cumpliendo o si es necesario realizar ajustes.
+\end{enumerate}
+
+Consejos para Elaborar un Cronograma de Tesis en Ingeniería
+
+\begin{enumerate}
+    \item Sé realista: Estima los tiempos basándote en experiencias previas y en los recursos disponibles. Evita subestimar el tiempo que puede llevar una actividad.
+    \item Añade un margen de seguridad: Reserva tiempo extra para etapas cruciales, como las pruebas y la redacción, donde suelen presentarse ajustes y correcciones.
+    \item Evalúa y ajusta periódicamente: Monitorea el avance y realiza ajustes si se detectan retrasos o cambios en el proyecto.
+    \item Usa software de gestión de proyectos: Herramientas como Microsoft Project, Trello o incluso Google Sheets pueden facilitar la creación y seguimiento del cronograma.
+\end{enumerate}
+
+El cronograma debe reflejar una planificación estratégica y organizada, demostrando que el proyecto está estructurado de manera eficiente para cumplir con los plazos establecidos.
+\end{frame}
+\section{Conclusiones}
+\begin{frame}[allowframebreaks,fragile]{Conclusiones}
+
+La sección de conclusiones resume los hallazgos más importantes de la investigación, reflexiona sobre su relevancia y explica el cumplimiento de los objetivos planteados. Esta sección es crucial porque cierra la tesis, destacando el valor del trabajo y sus contribuciones al campo de estudio.
+
+En el caso de un avance de tesis, la sección de conclusiones también debe reflejar un análisis provisional de los logros y aprendizajes alcanzados hasta el momento. Aunque la tesis no esté completa, esta sección permite identificar el avance del trabajo y orientar los siguientes pasos de manera clara y organizada.
+
+
+Estructura de la Sección de Conclusiones:
+
+\begin{enumerate}
+    \item Síntesis de los resultados principales:
+
+    Resume los resultados más relevantes, destacando cómo estos abordan los objetivos específicos y el problema de investigación.
+
+    En ingeniería, es común enfatizar los logros técnicos o avances logrados en el desarrollo, validación o aplicación de métodos, prototipos o tecnologías.
+
+    \item Cumplimiento de los Objetivos:
+
+    Explica si se cumplieron los objetivos específicos y el objetivo general de la investigación.
+
+    Aborda cada objetivo brevemente y muestra cómo los resultados logrados los alcanzaron o si existieron limitaciones que afectaron su cumplimiento.
+
+    \item Contribución al Campo de Ingeniería:
+
+    Describe cómo la investigación contribuye al conocimiento o desarrollo en el área específica de ingeniería.
+
+    Esto puede incluir innovaciones en técnicas, mejoras en rendimiento, soluciones a problemas prácticos, o descubrimientos teóricos importantes.
+
+    \item Limitaciones y reflexión crítica:
+
+    Reconoce cualquier limitación que surgió durante la investigación y cómo estas afectaron los resultados.
+
+    Una reflexión crítica muestra la capacidad de autoevaluación del investigador y ofrece un análisis realista sobre los alcances del estudio.
+
+    \item Implicaciones prácticas y aplicaciones futuras:
+
+    Explica cómo podrían aplicarse los resultados en la práctica o cómo benefician al sector industrial, tecnológico, académico, etc.
+
+    Menciona cómo el trabajo realizado puede influir en estudios futuros o en el desarrollo de nuevas tecnologías.
+
+    \item Recomendaciones para Trabajos Futuros:
+
+    Sugerir áreas específicas que aún necesitan investigación o aspectos técnicos que podrían mejorarse.
+
+    Estas recomendaciones muestran la proyección de la investigación hacia el futuro y posibles líneas de continuidad.
+\end{enumerate}
+
+Consejos para Redactar la Sección de Conclusiones en una Tesis de Ingeniería
+
+\begin{enumerate}
+    \item Sé conciso y directo: Evita repetir toda la información; céntrate en los hallazgos más importantes y en el valor de tu investigación.
+    \item Usa un tono reflexivo y objetivo: Muestra el impacto del trabajo, pero evita exagerar los logros.
+    \item Evita nuevos datos: Las conclusiones deben basarse en los resultados ya presentados, no incluir datos adicionales.
+    \item Enfócate en el futuro: Una buena conclusión cierra el trabajo pero también sugiere cómo otros pueden construir sobre él.
+\end{enumerate}
+
+La sección de conclusiones es clave para demostrar cómo el trabajo aborda de manera efectiva el problema planteado y contribuye al avance en el campo de ingeniería.
+
+En caso de un Avance de Tesis, la Sección de Conclusiones se estructura de la siguiente manera: 
+
+\begin{enumerate}
+    \item Resumen de Logros Parciales:
+
+    Resume los resultados obtenidos hasta la fecha, resaltando avances clave en el desarrollo del proyecto, como pruebas preliminares, diseño de prototipos, o validación de modelos.
+
+    Esto brinda una visión de cómo el proyecto se está encaminando hacia los objetivos finales.
+
+    \item Cumplimiento de Objetivos Parciales:
+
+    Evalúa qué objetivos específicos han sido cumplidos y qué pasos siguen pendientes.
+
+    Para los objetivos aún no alcanzados, se pueden mencionar las tareas planeadas para lograrlos.
+    
+    \item Contribuciones temporales al Proyecto:
+
+    Menciona los avances que representan una contribución al campo o a la solución del problema, aunque todavía no sean conclusivos.
+
+    Por ejemplo, podrías incluir descubrimientos preliminares, mejoras iniciales o aportes en metodología que ya estén perfilando el aporte final.
+
+    \item Limitaciones y Retos encontrados:
+
+    Describe cualquier limitación encontrada hasta el momento, señalando si se necesita ajustar el enfoque o la metodología para superarlas en la fase siguiente.
+
+    \item Reflexión sobre el progreso y Plan de Trabajo:
+
+    Reflexiona sobre cómo los avances logrados impactan en el desarrollo global de la tesis y qué ajustes se prevén en la planificación.
+
+    Define los próximos pasos de trabajo, estableciendo las actividades prioritarias y las metas a corto plazo.
+
+    \item Proyecciones y siguientes pasos:
+
+    Describe las actividades específicas que siguen en el proyecto y cómo cada una contribuirá a la conclusión de la tesis.
+
+    Este apartado debe mostrar una hoja de ruta clara que permita visualizar la continuidad del trabajo.
+\end{enumerate}
+
+En el contexto de un avance de tesis, las conclusiones ayudan a demostrar el progreso hecho y ofrecen una visión de los próximos pasos necesarios para la culminación del proyecto.
+\end{frame}
+\section{Referencias}
+\begin{frame}[allowframebreaks,fragile]{Referencias}
+La sección de referencias es esencial para respaldar el contenido y brindar reconocimiento a las fuentes de información empleadas. Este apartado incluye todas las fuentes citadas a lo largo del trabajo, como artículos científicos, libros, tesis, informes técnicos, normas, sitios web, y cualquier otro material académico o técnico relevante.
+
+Estructura de la Sección de Referencias
+
+\begin{enumerate}
+    \item Estilo de Citación:
+
+    Respeta el estilo de citación indicado en los lineamientos del programa. 
+    
+    Es importante seguir el mismo estilo de forma consistente en toda la presentación.
+
+    \item Tipos de Fuentes Comunes en Ingeniería:
+    \begin{itemize}
+        \item Artículos científicos: La investigación en ingeniería se apoya en gran medida en artículos revisados por pares. Incluye el nombre de los autores, título del artículo, nombre de la revista, volumen, número, páginas y año de publicación.
+        \item Libros: Cuando citas libros de referencia, incluye el autor(es), título, edición (si aplica), editorial, y año de publicación.
+        \item Informes técnicos o normativas: Cita reportes técnicos, estándares (como los de IEEE o ISO), o normativas que fundamenten aspectos técnicos o metodológicos.
+        \item Patentes: Si citas patentes, incluye el inventor, número de patente, título, y fecha de publicación.
+        \item Tesis y documentos académicos: Al citar tesis previas, incluye autor, título, institución, tipo de documento (tesis de maestría o doctoral), y año.
+        \item Recursos electrónicos: Para sitios web, manuales en línea, o documentos digitales, incluye URL y la fecha en la que se consultó el recurso.
+    \end{itemize}
+    \item Uso de Herramientas de Gestión Bibliográfica:
+
+    Herramientas como EndNote, Zotero, Mendeley, o LaTeX pueden facilitar la creación y gestión de las referencias, asegurando que cumplan con el formato requerido.
+
+    Estas herramientas también son útiles para actualizar referencias de forma automática y evitar errores en la citación.
+\end{enumerate}
+
+Consejos para la Sección de Referencias
+
+\begin{enumerate}
+    \item Mantén un registro desde el inicio: Llevar un registro de cada fuente utilizada durante la investigación facilita mucho el proceso de citación al final.
+    \item Verifica la precisión: Revisa que todos los detalles de cada referencia estén correctos (nombre de autores, título, año, etc.).
+    \item Evita fuentes poco confiables: Usa únicamente fuentes de calidad, preferiblemente revisadas por pares o de editoriales académicas reconocidas.
+    \item Actualiza la lista: A medida que el proyecto avanza, revisa y actualiza las referencias para incluir las fuentes más recientes o relevantes que se hayan agregado.
+\end{enumerate}
+
+La sección de referencias valida y respalda los contenidos de una tesis de ingeniería, ofreciendo un marco de credibilidad y facilitando la consulta a futuras investigaciones.
+\end{frame}
+\begin{frame}[allowframebreaks]{Referencias}
+% Despliega las referencias del archivo referencias.bib
+  \nocite{*}
+  \bibliography{referencias}
+  \bibliographystyle{abbrv}
+\end{frame}
+\end{document}
